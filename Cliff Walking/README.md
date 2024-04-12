@@ -35,19 +35,22 @@ For this problem we created 2 different agents using different algorithms.
 
 **SARSA**
 State–action–reward–state–action is an algorithm for learning a Markov decision process policy, used in the reinforcement learning area of machine learning. A typical SARSA algorithm can be written as the following:
-![[Pasted image 20240412231536.png]]
+![Image](SARSA_Algorithm.png)
 
 Within SARSA agent we are using an epsilon-greedy policy. Epsilon greedy policy is a way to balance exploration and exploitation where we are choosing a random action with probability epsilon and choosing the best action with probability 1-epsilon. After each action we our Q table with the reward according to the action taken at particular state. 
 The code implementation of SARSA agent can be found in the sarsa.py file. After our 500 episodes the SARSA agent is consistently able to reach the end state in under 20 actions where 13 steps are the optimal number of actions it can take to reach end state.
+![Q-Learning GIF](SARSAGIF.gif)
+
 
 
 **Q-Learning**
 Q-Learning is a model-free  reinforcement learning algorithm to learn the value of an action in a particular state. It does not require a model of the environment (hence "model-free"), and it can handle problems with stochastic transitions and rewards without requiring adaptations.
 
 For any finite Markov decision process, _Q_-learning finds an optimal policy in the sense of maximizing the expected value of the total reward over any and all successive steps, starting from the current state. _Q_-learning can identify an optimal action-selection policy for any given finite Markov decision process, given infinite exploration time and a partly random policy. "Q" refers to the function that the algorithm computes – the expected rewards for an action taken in a given state.
-![[Pasted image 20240412232552.png]]
+![Image](QLearning_Algorithm.png)
 
 The Q-Learning Model will use the same epsilon-greedy policy and we can see that after the 500 episodes the agent is able to minimize the number of action down to 13 which is the optimal number of actions for the problem.
+![Q-Learning GIF](QLearningGIF.gif)
 
 
 Both the SARSA and Q-Learning are similar algorithms with the key difference being SARSA updates its Q-values based on the current policy's action selection, while Q-learning updates its Q-values based on the maximum Q-value of the next state, regardless of the policy. This leads to SARSA being an on-policy method and Q-learning being an off-policy method.
