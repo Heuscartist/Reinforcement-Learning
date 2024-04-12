@@ -28,7 +28,7 @@ Each time step incurs -1 reward, unless the player stepped into the cliff, which
 ## Episode End
 The episode terminates when the player enters state `[47]` (location [3, 11]).
 
-![Image](image.png)
+![Image](Gym Interface.png)
 
 ## Agent Algorithms
 For this problem we created 2 different agents using different algorithms.
